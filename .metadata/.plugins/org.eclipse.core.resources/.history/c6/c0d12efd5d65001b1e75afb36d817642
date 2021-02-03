@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/users" method="POST">
+		Username: <input type="text" name="username" th:field="*{username}"> <br>
+		Password: <input type="password" name="password" th:field="*{password}"> <br>
+		<button type="submit">Login</button>
+	</form>
+</body>
+</html>

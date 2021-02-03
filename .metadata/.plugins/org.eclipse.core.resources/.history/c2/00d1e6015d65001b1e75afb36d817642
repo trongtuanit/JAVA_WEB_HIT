@@ -1,0 +1,5 @@
+package com.hithaui.entities;
+
+public class Account {
+
+}

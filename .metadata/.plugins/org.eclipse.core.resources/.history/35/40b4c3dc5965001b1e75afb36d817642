@@ -1,0 +1,60 @@
+package com.hithaui;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class AppController {
+
+//	@RequestMapping(value = "/", method = RequestMethod.GET)
+//	@GetMapping(value = "/")
+//	public String home() {
+//		return "index";
+//	}
+	
+//	@GetMapping("/")
+//	public ModelAndView home() {
+//		ModelAndView mav = new ModelAndView("index");
+//		String str = "Bùi Tất Trung";
+//		mav.addObject("name", str);
+//		return mav;
+//	}
+	
+//	@GetMapping("/")
+//	public ModelAndView home() {
+//		ModelAndView mav = new ModelAndView("index");
+//		List<String> list = new ArrayList<String>();
+//		String str = "Bùi Tất Trung";
+//		list.add("Trung");
+//		list.add("Thắng");
+//		list.add("Sáng");
+//		list.add("Máy dập");
+//		mav.addObject("name", str);
+//		mav.addObject("listNames", list);
+//		return mav;
+//	}
+	
+//	@GetMapping("/xyz")
+//	public String abc() {
+//		return "xyz";
+//	}
+	
+	@GetMapping("/students")
+	public ModelAndView studens() {
+		List<Student> students = new ArrayList<Student>();
+		students.add(new Student(43, "Corbin Edgington", "cedgington0@tamu.edu", "15956 Hoffman Terrace"));
+		students.add(new Student(75, "Talbert Mulheron", "tmulheron1@fastcompany.com", "119 Clove Circle"));
+		students.add(new Student(46, "Lauralee Dedman", "ldedman2@webmd.com", "90 Melvin Trail"));
+		students.add(new Student(49, "Pen Folkard", "pfolkard3@flavors.me", "77 Stone Corner Point"));
+		students.add(new Student(98, "Paulina Earp", "pearp4@weibo.com", "632 Tennessee Parkway"));
+		ModelAndView mav = new ModelAndView("index");
+		mav.addObject("abc", students);
+		return mav;
+	}
+}

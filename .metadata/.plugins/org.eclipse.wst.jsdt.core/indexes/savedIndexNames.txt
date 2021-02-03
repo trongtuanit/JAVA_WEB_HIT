@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+E:\STUDY\CODE\JAVA_WEB_HIT_2021\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1257760275.index
+2778793941.index
+1946961914.index
+2881151992.index
+2583832278.index
+540433342.index
+3976533568.index
+1807664335.index
