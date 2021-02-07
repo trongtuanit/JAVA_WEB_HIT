@@ -1,8 +1,0 @@
-package com.hithaui;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class Animal {
-
-}
