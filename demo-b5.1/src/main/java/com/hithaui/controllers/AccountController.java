@@ -25,11 +25,11 @@ import com.hithaui.repositories.AccountRepository;
 @RequestMapping("/api/accounts")
 public class AccountController {
 // 	RESTful API: CRUD (create, read, update, delete): 
-//	GET 	/api/accounts 			: lấy ra danh sách tài khoản
-//	POST	/api/accounts 			: tạo 1 tài khoản
-//	GET		/api/accounts/{id}		: lấy ra tài khoản theo id
+//	GET 	/api/accounts 		: lấy ra danh sách tài khoản
+//	POST	/api/accounts 		: tạo 1 tài khoản
+//	GET	/api/accounts/{id}	: lấy ra tài khoản theo id
 //	PATCH	/api/accounts/{id}    	: chỉnh sửa thông tin tài khoản
-//	DELETE	/api/accounts/{id}		: xóa 1 tài khoản
+//	DELETE	/api/accounts/{id}	: xóa 1 tài khoản
 
 	@Autowired
 	private AccountRepository accountRepository;
@@ -64,7 +64,7 @@ public class AccountController {
 		AccountDAO accountDAO = new AccountDAO();
 		
 //		AccountDAO account = accountRepository.findByUsername(accountDTO.getUsername());
-//		if(account == null) {
+//		if(account != null) {
 //			// Duplicate Exception
 //		}
 		accountDAO.setUsername(accountDTO.getUsername());
@@ -94,6 +94,6 @@ public class AccountController {
 	@DeleteMapping("/{accountId}")
 	public ResponseEntity<?> deleteAccountById(@PathVariable("accountId") Long accountId) {
 		accountRepository.deleteById(accountId);
-		return ResponseEntity.status(204).build();
+		return ResponseEntity.status(200).build();
 	}
 }
