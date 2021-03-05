@@ -7,5 +7,5 @@ import com.hithaui.dao.Student;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
-
+	Student findByPhone(String phone);
 }
