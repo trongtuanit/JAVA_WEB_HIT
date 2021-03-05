@@ -29,7 +29,7 @@ public class Subject {
 	private String name;
 	
 	@ManyToOne
-	@JoinColumn(name = "user_id")
+	@JoinColumn(name = "student_id")
 	private Student student;
 
 	@CreationTimestamp

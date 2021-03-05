@@ -22,7 +22,7 @@ public class Student {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "user_id")
+	@Column(name = "student_id")
 	private Integer id;
 
 	@Nationalized
